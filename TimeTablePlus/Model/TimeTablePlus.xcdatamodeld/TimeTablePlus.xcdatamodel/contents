@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Day" representedClassName="Day" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="seqNo" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relItems" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Item" inverseName="relDay" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Exam" representedClassName="Exam" syncable="YES">
+        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="examDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="examDesc" attributeType="String" syncable="YES"/>
+        <attribute name="seqNo" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relSubject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subject" inverseName="relExams" inverseEntity="Subject" syncable="YES"/>
+    </entity>
+    <entity name="FirstRunCompleted" representedClassName="FirstRunCompleted" syncable="YES">
+        <attribute name="firstRunCompleted" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Homework" representedClassName="Homework" syncable="YES">
+        <attribute name="done" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="entryDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hwDesc" attributeType="String" syncable="YES"/>
+        <attribute name="seqNo" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relSubject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subject" inverseName="relHomeworks" inverseEntity="Subject" syncable="YES"/>
+    </entity>
+    <entity name="Information" representedClassName="Information" syncable="YES">
+        <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="entryDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="information" attributeType="String" syncable="YES"/>
+        <attribute name="seqNo" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES">
+        <attribute name="from" attributeType="String" syncable="YES"/>
+        <attribute name="intFrom" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="intTo" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="to" attributeType="String" syncable="YES"/>
+        <relationship name="relDay" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Day" inverseName="relItems" inverseEntity="Day" syncable="YES"/>
+        <relationship name="relSubject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Subject" inverseName="relItems" inverseEntity="Subject" syncable="YES"/>
+        <relationship name="relTimetable" maxCount="1" deletionRule="Nullify" destinationEntity="Timetable" inverseName="relItems" inverseEntity="Timetable" syncable="YES"/>
+    </entity>
+    <entity name="Settings" representedClassName="Settings" syncable="YES">
+        <attribute name="classPeriodDuration" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="intervalInTimePicker" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pauseDuration" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="seqNo" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relExams" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Exam" inverseName="relSubject" inverseEntity="Exam" syncable="YES"/>
+        <relationship name="relHomeworks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Homework" inverseName="relSubject" inverseEntity="Homework" syncable="YES"/>
+        <relationship name="relItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Item" inverseName="relSubject" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <entity name="Timetable" representedClassName="Timetable" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="seqNo" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relItems" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Item" inverseName="relTimetable" inverseEntity="Item" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Day" positionX="-290" positionY="-243" width="128" height="88"/>
+        <element name="Exam" positionX="-477" positionY="-243" width="128" height="118"/>
+        <element name="FirstRunCompleted" positionX="-459" positionY="-369" width="128" height="58"/>
+        <element name="Homework" positionX="-459" positionY="-36" width="128" height="118"/>
+        <element name="Information" positionX="-137" positionY="-369" width="128" height="103"/>
+        <element name="Item" positionX="115" positionY="-135" width="128" height="148"/>
+        <element name="Settings" positionX="-297" positionY="-369" width="128" height="88"/>
+        <element name="Subject" positionX="-290" positionY="-135" width="128" height="118"/>
+        <element name="Timetable" positionX="-290" positionY="-1" width="128" height="88"/>
+    </elements>
+</model>

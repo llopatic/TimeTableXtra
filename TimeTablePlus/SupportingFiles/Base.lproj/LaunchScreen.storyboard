@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rHm-iG-dqv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="m0U-vg-T4i">
+            <objects>
+                <navigationController id="rHm-iG-dqv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2SS-kP-nlu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="lbr-R0-UzP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QRQ-uY-L0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-919" y="291"/>
+        </scene>
+        <!--Timetable Xtra-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SPV-Zv-TP5">
+                                <rect key="frame" x="16" y="64" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Morning"/>
+                                    <segment title="Afternoon"/>
+                                </segments>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRP-UX-qOP">
+                                <rect key="frame" x="0.0" y="111" width="375" height="123"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="123" id="7lW-Af-3TM"/>
+                                </constraints>
+                            </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Irj-fR-W7I">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Settings" id="ecG-UW-UUx"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="KLT-Dx-vG7"/>
+                                    <barButtonItem title="History" id="okf-EY-cor"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="91T-9l-I4r"/>
+                                    <barButtonItem title="Info" id="NDS-98-L35"/>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fYf-sw-HH4">
+                                <rect key="frame" x="16" y="242" width="343" height="381"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fYf-sw-HH4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7Zd-fK-CRu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SPV-Zv-TP5" secondAttribute="trailing" constant="16" id="Bm0-aA-UeF"/>
+                            <constraint firstItem="TRP-UX-qOP" firstAttribute="top" secondItem="SPV-Zv-TP5" secondAttribute="bottom" constant="19" id="Bws-HE-6yG"/>
+                            <constraint firstItem="Irj-fR-W7I" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="C31-I1-mlK"/>
+                            <constraint firstItem="SPV-Zv-TP5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L0c-uA-3vY"/>
+                            <constraint firstItem="fYf-sw-HH4" firstAttribute="top" secondItem="TRP-UX-qOP" secondAttribute="bottom" constant="8" id="S4F-NU-gjB"/>
+                            <constraint firstItem="TRP-UX-qOP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vkw-NW-vxc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fYf-sw-HH4" secondAttribute="trailing" constant="16" id="WVn-z6-ZhU"/>
+                            <constraint firstItem="SPV-Zv-TP5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wr6-Oa-kfi"/>
+                            <constraint firstItem="Irj-fR-W7I" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZdL-j3-xIH"/>
+                            <constraint firstItem="TRP-UX-qOP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nnh-kn-EnD"/>
+                            <constraint firstItem="Irj-fR-W7I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pqy-j1-Ns2"/>
+                            <constraint firstItem="Irj-fR-W7I" firstAttribute="top" secondItem="fYf-sw-HH4" secondAttribute="bottom" id="u3L-4a-2zv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="BIA-Cg-iUU"/>
+                    <navigationItem key="navigationItem" title="Timetable Xtra" id="eAD-RT-Pk8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="B4A-qD-pwv"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="289.20539730134936"/>
+        </scene>
+    </scenes>
+</document>

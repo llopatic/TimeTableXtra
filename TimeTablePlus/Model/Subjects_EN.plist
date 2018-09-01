@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>English</string>
+	<string>Math</string>
+	<string>Science</string>
+	<string>French</string>
+	<string>German</string>
+	<string>Music</string>
+	<string>PE</string>
+	<string>Art</string>
+	<string>Religion</string>
+	<string>Computer science</string>
+	<string>Biology</string>
+	<string>Chemistry</string>
+	<string>Physics</string>
+	<string>History</string>
+	<string>Geography</string>
+	<string>Classteacher hour</string>
+</array>
+</plist>

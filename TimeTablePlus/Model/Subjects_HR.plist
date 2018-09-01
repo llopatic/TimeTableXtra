@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Hrvatski</string>
+	<string>Matematika</string>
+	<string>Priroda i društvo</string>
+	<string>Engleski</string>
+	<string>Francuski</string>
+	<string>Njemački</string>
+	<string>Glazbeni</string>
+	<string>Tjelesni</string>
+	<string>Likovni</string>
+	<string>Vjeronauk</string>
+	<string>Informatika</string>
+	<string>Biologija</string>
+	<string>Kemija</string>
+	<string>Fizika</string>
+	<string>Povijest</string>
+	<string>Zemljopis</string>
+	<string>Sat razrednika</string>
+</array>
+</plist>

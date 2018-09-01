@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3090235201932EE00917562 /* ExamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3090234201932EE00917562 /* ExamsTableViewCell.swift */; };
+		B30902372019516500917562 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30902362019516500917562 /* InfoTableViewCell.swift */; };
+		B30B1E8F2007ED1100D94638 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B1E8E2007ED1100D94638 /* AppDelegate.swift */; };
+		B30B1E942007ED1100D94638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30B1E922007ED1100D94638 /* Main.storyboard */; };
+		B30B1E972007ED1100D94638 /* TimeTablePlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B30B1E952007ED1100D94638 /* TimeTablePlus.xcdatamodeld */; };
+		B30B1E992007ED1100D94638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30B1E982007ED1100D94638 /* Assets.xcassets */; };
+		B30B1E9C2007ED1100D94638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30B1E9A2007ED1100D94638 /* LaunchScreen.storyboard */; };
+		B30B1EA82007F13600D94638 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30B1EA72007F13600D94638 /* CoreDataManager.swift */; };
+		B34293982013CD0C008B7F97 /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34293972013CD0C008B7F97 /* HomeworkViewController.swift */; };
+		B3656061200AD38E004E4C9B /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3656060200AD38E004E4C9B /* ItemTableViewCell.swift */; };
+		B375B64B200D79A500038988 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B375B64A200D79A500038988 /* SettingsViewController.swift */; };
+		B377BE1A20169AD200D2F731 /* ExamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B377BE1920169AD200D2F731 /* ExamViewController.swift */; };
+		B377BE1C20169EDD00D2F731 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B377BE1B20169EDD00D2F731 /* InfoViewController.swift */; };
+		B3BBD45E200FE2AF009C46C5 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3BBD45D200FE2AF009C46C5 /* Settings.plist */; };
+		B3C819922008C88F0003C063 /* Subjects_EN.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C819912008C88F0003C063 /* Subjects_EN.plist */; };
+		B3C819942008CB120003C063 /* Subjects_HR.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C819932008CB120003C063 /* Subjects_HR.plist */; };
+		B3C819962008D0C40003C063 /* Days.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C819952008D0C40003C063 /* Days.plist */; };
+		B3C819982008D68C0003C063 /* Timetables.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C819972008D68C0003C063 /* Timetables.plist */; };
+		B3C8199C2008E95F0003C063 /* SubjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C8199B2008E95F0003C063 /* SubjectsTableViewController.swift */; };
+		B3C819E32008F1780003C063 /* Exam+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819D12008F1780003C063 /* Exam+CoreDataClass.swift */; };
+		B3C819E42008F1780003C063 /* Exam+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819D22008F1780003C063 /* Exam+CoreDataProperties.swift */; };
+		B3C819E52008F1780003C063 /* Homework+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819D32008F1780003C063 /* Homework+CoreDataClass.swift */; };
+		B3C819E62008F1780003C063 /* Homework+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819D42008F1780003C063 /* Homework+CoreDataProperties.swift */; };
+		B3C819E92008F1780003C063 /* Notifications+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819D72008F1780003C063 /* Notifications+CoreDataClass.swift */; };
+		B3C819EA2008F1780003C063 /* Notifications+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819D82008F1780003C063 /* Notifications+CoreDataProperties.swift */; };
+		B3C819EB2008F1780003C063 /* FirstRunCompleted+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819D92008F1780003C063 /* FirstRunCompleted+CoreDataClass.swift */; };
+		B3C819EC2008F1780003C063 /* FirstRunCompleted+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819DA2008F1780003C063 /* FirstRunCompleted+CoreDataProperties.swift */; };
+		B3C819ED2008F1780003C063 /* Subject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819DB2008F1780003C063 /* Subject+CoreDataClass.swift */; };
+		B3C819EE2008F1780003C063 /* Subject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819DC2008F1780003C063 /* Subject+CoreDataProperties.swift */; };
+		B3C819EF2008F1780003C063 /* Timetable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819DD2008F1780003C063 /* Timetable+CoreDataClass.swift */; };
+		B3C819F02008F1780003C063 /* Timetable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819DE2008F1780003C063 /* Timetable+CoreDataProperties.swift */; };
+		B3C819F12008F1780003C063 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819DF2008F1780003C063 /* Item+CoreDataClass.swift */; };
+		B3C819F22008F1780003C063 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819E02008F1780003C063 /* Item+CoreDataProperties.swift */; };
+		B3C819F32008F1780003C063 /* Day+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819E12008F1780003C063 /* Day+CoreDataClass.swift */; };
+		B3C819F42008F1780003C063 /* Day+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819E22008F1780003C063 /* Day+CoreDataProperties.swift */; };
+		B3C819F6200907670003C063 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819F5200907670003C063 /* Model.swift */; };
+		B3C819F8200928F40003C063 /* TimetablePlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819F7200928F40003C063 /* TimetablePlusViewController.swift */; };
+		B3C819FA20094B1B0003C063 /* TimeTableItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C819F920094B1B0003C063 /* TimeTableItemViewController.swift */; };
+		B3D925F8201000F000CEF2E0 /* Settings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D925F6201000F000CEF2E0 /* Settings+CoreDataClass.swift */; };
+		B3D925F9201000F000CEF2E0 /* Settings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D925F7201000F000CEF2E0 /* Settings+CoreDataProperties.swift */; };
+		B3D925FB201145B800CEF2E0 /* SubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D925FA201145B800CEF2E0 /* SubjectViewController.swift */; };
+		B3DE8F1320185FBA00CABC87 /* HomeworksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DE8F1220185FBA00CABC87 /* HomeworksTableViewCell.swift */; };
+		B3E9FC0920132CF200F38A20 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9FC0820132CF200F38A20 /* Util.swift */; };
+		B3FC0EA32017B86800C6B636 /* Information+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC0EA12017B86800C6B636 /* Information+CoreDataClass.swift */; };
+		B3FC0EA42017B86800C6B636 /* Information+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC0EA22017B86800C6B636 /* Information+CoreDataProperties.swift */; };
+		B3FC0EA62017D9E200C6B636 /* HomewokHistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC0EA52017D9E200C6B636 /* HomewokHistViewController.swift */; };
+		B3FC0EA82017D9FD00C6B636 /* ExamHistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC0EA72017D9FD00C6B636 /* ExamHistViewController.swift */; };
+		B3FC0EAA2017DA1300C6B636 /* InfoHistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC0EA92017DA1300C6B636 /* InfoHistViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B3090234201932EE00917562 /* ExamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsTableViewCell.swift; sourceTree = "<group>"; };
+		B30902362019516500917562 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		B30B1E8B2007ED1100D94638 /* TimeTablePlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTablePlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30B1E8E2007ED1100D94638 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B30B1E932007ED1100D94638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B30B1E962007ED1100D94638 /* TimeTablePlus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeTablePlus.xcdatamodel; sourceTree = "<group>"; };
+		B30B1E982007ED1100D94638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B30B1E9B2007ED1100D94638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B30B1E9D2007ED1100D94638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B30B1EA72007F13600D94638 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B34293972013CD0C008B7F97 /* HomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
+		B3656060200AD38E004E4C9B /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		B375B64A200D79A500038988 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B377BE1920169AD200D2F731 /* ExamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamViewController.swift; sourceTree = "<group>"; };
+		B377BE1B20169EDD00D2F731 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B3BBD45D200FE2AF009C46C5 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		B3C819912008C88F0003C063 /* Subjects_EN.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Subjects_EN.plist; sourceTree = "<group>"; };
+		B3C819932008CB120003C063 /* Subjects_HR.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Subjects_HR.plist; sourceTree = "<group>"; };
+		B3C819952008D0C40003C063 /* Days.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Days.plist; sourceTree = "<group>"; };
+		B3C819972008D68C0003C063 /* Timetables.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Timetables.plist; sourceTree = "<group>"; };
+		B3C8199B2008E95F0003C063 /* SubjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsTableViewController.swift; sourceTree = "<group>"; };
+		B3C819D12008F1780003C063 /* Exam+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exam+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819D22008F1780003C063 /* Exam+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exam+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819D32008F1780003C063 /* Homework+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homework+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819D42008F1780003C063 /* Homework+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Homework+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819D72008F1780003C063 /* Notifications+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819D82008F1780003C063 /* Notifications+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notifications+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819D92008F1780003C063 /* FirstRunCompleted+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirstRunCompleted+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819DA2008F1780003C063 /* FirstRunCompleted+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirstRunCompleted+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819DB2008F1780003C063 /* Subject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819DC2008F1780003C063 /* Subject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Subject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819DD2008F1780003C063 /* Timetable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timetable+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819DE2008F1780003C063 /* Timetable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timetable+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819DF2008F1780003C063 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819E02008F1780003C063 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819E12008F1780003C063 /* Day+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3C819E22008F1780003C063 /* Day+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Day+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3C819F5200907670003C063 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B3C819F7200928F40003C063 /* TimetablePlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetablePlusViewController.swift; sourceTree = "<group>"; };
+		B3C819F920094B1B0003C063 /* TimeTableItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableItemViewController.swift; sourceTree = "<group>"; };
+		B3D925F6201000F000CEF2E0 /* Settings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3D925F7201000F000CEF2E0 /* Settings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Settings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3D925FA201145B800CEF2E0 /* SubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectViewController.swift; sourceTree = "<group>"; };
+		B3DE8F1220185FBA00CABC87 /* HomeworksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworksTableViewCell.swift; sourceTree = "<group>"; };
+		B3E9FC0820132CF200F38A20 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		B3FC0EA12017B86800C6B636 /* Information+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Information+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3FC0EA22017B86800C6B636 /* Information+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Information+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3FC0EA52017D9E200C6B636 /* HomewokHistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomewokHistViewController.swift; sourceTree = "<group>"; };
+		B3FC0EA72017D9FD00C6B636 /* ExamHistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamHistViewController.swift; sourceTree = "<group>"; };
+		B3FC0EA92017DA1300C6B636 /* InfoHistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHistViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B30B1E882007ED1100D94638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B30B1E822007ED1100D94638 = {
+			isa = PBXGroup;
+			children = (
+				B30B1E8D2007ED1100D94638 /* TimeTablePlus */,
+				B30B1E8C2007ED1100D94638 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B30B1E8C2007ED1100D94638 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B30B1E8B2007ED1100D94638 /* TimeTablePlus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B30B1E8D2007ED1100D94638 /* TimeTablePlus */ = {
+			isa = PBXGroup;
+			children = (
+				B30B1E9D2007ED1100D94638 /* Info.plist */,
+				B30B1E922007ED1100D94638 /* Main.storyboard */,
+				B3E9FC0820132CF200F38A20 /* Util.swift */,
+				B30B1EA62007F07400D94638 /* SupportingFiles */,
+				B30B1EA32007F01B00D94638 /* Model */,
+				B30B1EA52007F03C00D94638 /* ViewControllers */,
+			);
+			path = TimeTablePlus;
+			sourceTree = "<group>";
+		};
+		B30B1EA32007F01B00D94638 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3C819F5200907670003C063 /* Model.swift */,
+				B30B1EA72007F13600D94638 /* CoreDataManager.swift */,
+				B30B1E952007ED1100D94638 /* TimeTablePlus.xcdatamodeld */,
+				B3C819912008C88F0003C063 /* Subjects_EN.plist */,
+				B3C819932008CB120003C063 /* Subjects_HR.plist */,
+				B3C819952008D0C40003C063 /* Days.plist */,
+				B3C819972008D68C0003C063 /* Timetables.plist */,
+				B3BBD45D200FE2AF009C46C5 /* Settings.plist */,
+				B30B1EA42007F02800D94638 /* ManagedObjects */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B30B1EA42007F02800D94638 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC0EA12017B86800C6B636 /* Information+CoreDataClass.swift */,
+				B3FC0EA22017B86800C6B636 /* Information+CoreDataProperties.swift */,
+				B3D925F6201000F000CEF2E0 /* Settings+CoreDataClass.swift */,
+				B3D925F7201000F000CEF2E0 /* Settings+CoreDataProperties.swift */,
+				B3C819D12008F1780003C063 /* Exam+CoreDataClass.swift */,
+				B3C819D22008F1780003C063 /* Exam+CoreDataProperties.swift */,
+				B3C819D32008F1780003C063 /* Homework+CoreDataClass.swift */,
+				B3C819D42008F1780003C063 /* Homework+CoreDataProperties.swift */,
+				B3C819D72008F1780003C063 /* Notifications+CoreDataClass.swift */,
+				B3C819D82008F1780003C063 /* Notifications+CoreDataProperties.swift */,
+				B3C819D92008F1780003C063 /* FirstRunCompleted+CoreDataClass.swift */,
+				B3C819DA2008F1780003C063 /* FirstRunCompleted+CoreDataProperties.swift */,
+				B3C819DB2008F1780003C063 /* Subject+CoreDataClass.swift */,
+				B3C819DC2008F1780003C063 /* Subject+CoreDataProperties.swift */,
+				B3C819DD2008F1780003C063 /* Timetable+CoreDataClass.swift */,
+				B3C819DE2008F1780003C063 /* Timetable+CoreDataProperties.swift */,
+				B3C819DF2008F1780003C063 /* Item+CoreDataClass.swift */,
+				B3C819E02008F1780003C063 /* Item+CoreDataProperties.swift */,
+				B3C819E12008F1780003C063 /* Day+CoreDataClass.swift */,
+				B3C819E22008F1780003C063 /* Day+CoreDataProperties.swift */,
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		B30B1EA52007F03C00D94638 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B3C819F7200928F40003C063 /* TimetablePlusViewController.swift */,
+				B3C819F920094B1B0003C063 /* TimeTableItemViewController.swift */,
+				B3656060200AD38E004E4C9B /* ItemTableViewCell.swift */,
+				B375B64A200D79A500038988 /* SettingsViewController.swift */,
+				B3C8199B2008E95F0003C063 /* SubjectsTableViewController.swift */,
+				B3D925FA201145B800CEF2E0 /* SubjectViewController.swift */,
+				B34293972013CD0C008B7F97 /* HomeworkViewController.swift */,
+				B377BE1920169AD200D2F731 /* ExamViewController.swift */,
+				B377BE1B20169EDD00D2F731 /* InfoViewController.swift */,
+				B3FC0EA52017D9E200C6B636 /* HomewokHistViewController.swift */,
+				B3FC0EA72017D9FD00C6B636 /* ExamHistViewController.swift */,
+				B3FC0EA92017DA1300C6B636 /* InfoHistViewController.swift */,
+				B3DE8F1220185FBA00CABC87 /* HomeworksTableViewCell.swift */,
+				B3090234201932EE00917562 /* ExamsTableViewCell.swift */,
+				B30902362019516500917562 /* InfoTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B30B1EA62007F07400D94638 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B30B1E8E2007ED1100D94638 /* AppDelegate.swift */,
+				B30B1E9A2007ED1100D94638 /* LaunchScreen.storyboard */,
+				B30B1E982007ED1100D94638 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B30B1E8A2007ED1100D94638 /* TimeTablePlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B30B1EA02007ED1100D94638 /* Build configuration list for PBXNativeTarget "TimeTablePlus" */;
+			buildPhases = (
+				B30B1E872007ED1100D94638 /* Sources */,
+				B30B1E882007ED1100D94638 /* Frameworks */,
+				B30B1E892007ED1100D94638 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeTablePlus;
+			productName = TimeTablePlus;
+			productReference = B30B1E8B2007ED1100D94638 /* TimeTablePlus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B30B1E832007ED1100D94638 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Leonard Lopatic";
+				TargetAttributes = {
+					B30B1E8A2007ED1100D94638 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = B30B1E862007ED1100D94638 /* Build configuration list for PBXProject "TimeTablePlus" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B30B1E822007ED1100D94638;
+			productRefGroup = B30B1E8C2007ED1100D94638 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B30B1E8A2007ED1100D94638 /* TimeTablePlus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B30B1E892007ED1100D94638 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C819942008CB120003C063 /* Subjects_HR.plist in Resources */,
+				B3BBD45E200FE2AF009C46C5 /* Settings.plist in Resources */,
+				B3C819982008D68C0003C063 /* Timetables.plist in Resources */,
+				B30B1E9C2007ED1100D94638 /* LaunchScreen.storyboard in Resources */,
+				B30B1E992007ED1100D94638 /* Assets.xcassets in Resources */,
+				B3C819962008D0C40003C063 /* Days.plist in Resources */,
+				B30B1E942007ED1100D94638 /* Main.storyboard in Resources */,
+				B3C819922008C88F0003C063 /* Subjects_EN.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B30B1E872007ED1100D94638 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FC0EA62017D9E200C6B636 /* HomewokHistViewController.swift in Sources */,
+				B30902372019516500917562 /* InfoTableViewCell.swift in Sources */,
+				B3FC0EA82017D9FD00C6B636 /* ExamHistViewController.swift in Sources */,
+				B3C819EF2008F1780003C063 /* Timetable+CoreDataClass.swift in Sources */,
+				B3FC0EAA2017DA1300C6B636 /* InfoHistViewController.swift in Sources */,
+				B3C819EC2008F1780003C063 /* FirstRunCompleted+CoreDataProperties.swift in Sources */,
+				B3FC0EA42017B86800C6B636 /* Information+CoreDataProperties.swift in Sources */,
+				B30B1E8F2007ED1100D94638 /* AppDelegate.swift in Sources */,
+				B377BE1A20169AD200D2F731 /* ExamViewController.swift in Sources */,
+				B3C819F02008F1780003C063 /* Timetable+CoreDataProperties.swift in Sources */,
+				B3C819E62008F1780003C063 /* Homework+CoreDataProperties.swift in Sources */,
+				B3656061200AD38E004E4C9B /* ItemTableViewCell.swift in Sources */,
+				B3E9FC0920132CF200F38A20 /* Util.swift in Sources */,
+				B30B1EA82007F13600D94638 /* CoreDataManager.swift in Sources */,
+				B34293982013CD0C008B7F97 /* HomeworkViewController.swift in Sources */,
+				B3C819E32008F1780003C063 /* Exam+CoreDataClass.swift in Sources */,
+				B3C8199C2008E95F0003C063 /* SubjectsTableViewController.swift in Sources */,
+				B3C819EA2008F1780003C063 /* Notifications+CoreDataProperties.swift in Sources */,
+				B3C819E52008F1780003C063 /* Homework+CoreDataClass.swift in Sources */,
+				B3C819E42008F1780003C063 /* Exam+CoreDataProperties.swift in Sources */,
+				B3D925F9201000F000CEF2E0 /* Settings+CoreDataProperties.swift in Sources */,
+				B3C819F32008F1780003C063 /* Day+CoreDataClass.swift in Sources */,
+				B3FC0EA32017B86800C6B636 /* Information+CoreDataClass.swift in Sources */,
+				B30B1E972007ED1100D94638 /* TimeTablePlus.xcdatamodeld in Sources */,
+				B3D925F8201000F000CEF2E0 /* Settings+CoreDataClass.swift in Sources */,
+				B3C819F6200907670003C063 /* Model.swift in Sources */,
+				B3C819F42008F1780003C063 /* Day+CoreDataProperties.swift in Sources */,
+				B3C819F12008F1780003C063 /* Item+CoreDataClass.swift in Sources */,
+				B3C819F22008F1780003C063 /* Item+CoreDataProperties.swift in Sources */,
+				B3C819F8200928F40003C063 /* TimetablePlusViewController.swift in Sources */,
+				B3DE8F1320185FBA00CABC87 /* HomeworksTableViewCell.swift in Sources */,
+				B3C819EB2008F1780003C063 /* FirstRunCompleted+CoreDataClass.swift in Sources */,
+				B3C819EE2008F1780003C063 /* Subject+CoreDataProperties.swift in Sources */,
+				B3C819ED2008F1780003C063 /* Subject+CoreDataClass.swift in Sources */,
+				B3C819FA20094B1B0003C063 /* TimeTableItemViewController.swift in Sources */,
+				B3D925FB201145B800CEF2E0 /* SubjectViewController.swift in Sources */,
+				B3C819E92008F1780003C063 /* Notifications+CoreDataClass.swift in Sources */,
+				B377BE1C20169EDD00D2F731 /* InfoViewController.swift in Sources */,
+				B375B64B200D79A500038988 /* SettingsViewController.swift in Sources */,
+				B3090235201932EE00917562 /* ExamsTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B30B1E922007ED1100D94638 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B30B1E932007ED1100D94638 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B30B1E9A2007ED1100D94638 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B30B1E9B2007ED1100D94638 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B30B1E9E2007ED1100D94638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B30B1E9F2007ED1100D94638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B30B1EA12007ED1100D94638 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MK4YMJ2N96;
+				INFOPLIST_FILE = TimeTablePlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "design.mob-apps.TimetableXtra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c58cf600-b4c0-443b-8ee4-0c3b42f507d0";
+				PROVISIONING_PROFILE_SPECIFIER = TimetableXtraDevelopment;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B30B1EA22007ED1100D94638 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = MK4YMJ2N96;
+				INFOPLIST_FILE = TimeTablePlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "design.mob-apps.TimetableXtra";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "bba60c56-914c-4e11-82ea-203a95de871a";
+				PROVISIONING_PROFILE_SPECIFIER = TimetableXtraDistribution;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B30B1E862007ED1100D94638 /* Build configuration list for PBXProject "TimeTablePlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B30B1E9E2007ED1100D94638 /* Debug */,
+				B30B1E9F2007ED1100D94638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B30B1EA02007ED1100D94638 /* Build configuration list for PBXNativeTarget "TimeTablePlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B30B1EA12007ED1100D94638 /* Debug */,
+				B30B1EA22007ED1100D94638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B30B1E952007ED1100D94638 /* TimeTablePlus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B30B1E962007ED1100D94638 /* TimeTablePlus.xcdatamodel */,
+			);
+			currentVersion = B30B1E962007ED1100D94638 /* TimeTablePlus.xcdatamodel */;
+			path = TimeTablePlus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B30B1E832007ED1100D94638 /* Project object */;
+}

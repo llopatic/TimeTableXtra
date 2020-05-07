@@ -64,14 +64,14 @@ class ExamViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(ExamViewController.keyboardWillShow(notification:)),
-            name: Notification.Name.UIKeyboardWillShow,
+            name: UIResponder.keyboardWillShowNotification,
             object: nil)
         
         // Defining method that will be run when keyboard hides
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(ExamViewController.keyboardWillHide(notification:)),
-            name: Notification.Name.UIKeyboardWillHide,
+            name: UIResponder.keyboardWillHideNotification,
             object: nil)
         
         // Fetch subjects from database and populate subjects array in Model with fetched subjects

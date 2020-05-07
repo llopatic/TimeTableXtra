@@ -142,8 +142,8 @@ class SubjectViewController: UIViewController, UITextFieldDelegate, UIGestureRec
                     message: "This subject has related timetable items. If you change its name, all related timetable items belonging to it, will belong to this new subject name.  If the subject has related homework assignments and exams they will also belong to this new subject name. Tap Update to continue or Cancel to cancel this action",
                     okTitle: "Update",
                     cancelTitle: "Cancel",
-                    okActionStyle: UIAlertActionStyle.default,
-                    cancelActionStyle: UIAlertActionStyle.cancel,
+                    okActionStyle: UIAlertAction.Style.default,
+                    cancelActionStyle: UIAlertAction.Style.cancel,
                     okAction: { (action) in
                         Model.sharedInstance.currentSubject?.name = self.subjectTextField.text
                         CoreDataManager.sharedInstance.saveContext()
@@ -161,8 +161,8 @@ class SubjectViewController: UIViewController, UITextFieldDelegate, UIGestureRec
                     message: "This subject has related homework assignments. If you change its name, all related homework assignments belonging to it, will belong to this new subject name.  If the subject has related exams they will also belong to this new subject name. Tap Update to continue or Cancel to cancel this action",
                     okTitle: "Update",
                     cancelTitle: "Cancel",
-                    okActionStyle: UIAlertActionStyle.default,
-                    cancelActionStyle: UIAlertActionStyle.cancel,
+                    okActionStyle: UIAlertAction.Style.default,
+                    cancelActionStyle: UIAlertAction.Style.cancel,
                     okAction: { (action) in
                         Model.sharedInstance.currentSubject?.name = self.subjectTextField.text
                         CoreDataManager.sharedInstance.saveContext()
@@ -180,8 +180,8 @@ class SubjectViewController: UIViewController, UITextFieldDelegate, UIGestureRec
                     message: "This subject has related exams. If you change its name, all related exams belonging to it, will belong to this new subject name. Tap Update to continue or Cancel to cancel this action",
                     okTitle: "Update",
                     cancelTitle: "Cancel",
-                    okActionStyle: UIAlertActionStyle.default,
-                    cancelActionStyle: UIAlertActionStyle.cancel,
+                    okActionStyle: UIAlertAction.Style.default,
+                    cancelActionStyle: UIAlertAction.Style.cancel,
                     okAction: { (action) in
                         Model.sharedInstance.currentSubject?.name = self.subjectTextField.text
                         CoreDataManager.sharedInstance.saveContext()

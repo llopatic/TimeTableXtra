@@ -117,7 +117,7 @@ class TimeTableItemViewController: UIViewController, UIPickerViewDataSource, UIP
             pickerView2.selectRow(Int(item.intTo)/interval, inComponent: 0, animated: false)
             pickerView2.selectRow(Model.sharedInstance.amPm(totalMinutes: Int(item.intTo)), inComponent: 1, animated: false)
             
-            pickerView3.selectRow(Model.sharedInstance.subjects.index(of: item.relSubject!)!, inComponent: 0, animated: false)
+            pickerView3.selectRow(Model.sharedInstance.subjects.firstIndex(of: item.relSubject!)!, inComponent: 0, animated: false)
         }
         else {
             // Plus is clicked in TimetablePlusViewController, i.e. new timetable item is created

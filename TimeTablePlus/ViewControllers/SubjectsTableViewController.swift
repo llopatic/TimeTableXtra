@@ -71,7 +71,7 @@ class SubjectsTableViewController: UITableViewController {
     // current subject to be deleted has no related timetable items, homeworks
     // or exams or if it has them but the end user allows cascade deleting of
     // related timetable items, homeworks and exams
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if CoreDataManager.sharedInstance.existsTimetableItemFor(subject: Model.sharedInstance.subjects[indexPath.row]) {
                 askUser(
@@ -80,8 +80,8 @@ class SubjectsTableViewController: UITableViewController {
                     message: "This subject has related timetable items. If you delete it, all related timetable items will be deleted too. If the subject has related homework assignments and exams they will be deleted as well. Tap Delete to continue or Cancel to cancel this action.",
                     okTitle: "Delete",
                     cancelTitle: "Cancel",
-                    okActionStyle: UIAlertActionStyle.destructive,
-                    cancelActionStyle: UIAlertActionStyle.cancel,
+                    okActionStyle: UIAlertAction.Style.destructive,
+                    cancelActionStyle: UIAlertAction.Style.cancel,
                     okAction: { (action) in
                         let subject = Model.sharedInstance.subjects[indexPath.row]
                         Model.sharedInstance.subjects.remove(at: indexPath.row)
@@ -98,8 +98,8 @@ class SubjectsTableViewController: UITableViewController {
                     message: "This subject has related homework assignments. If you delete it, all related homework assignments will be deleted too. If the subject has related exams they will be deleted as well. Tap Delete to continue or Cancel to cancel this action.",
                     okTitle: "Delete",
                     cancelTitle: "Cancel",
-                    okActionStyle: UIAlertActionStyle.destructive,
-                    cancelActionStyle: UIAlertActionStyle.cancel,
+                    okActionStyle: UIAlertAction.Style.destructive,
+                    cancelActionStyle: UIAlertAction.Style.cancel,
                     okAction: { (action) in
                         let subject = Model.sharedInstance.subjects[indexPath.row]
                         Model.sharedInstance.subjects.remove(at: indexPath.row)
@@ -116,8 +116,8 @@ class SubjectsTableViewController: UITableViewController {
                     message: "This subject has related exams. If you delete it, all related exams will be deleted too. Tap Delete to continue or Cancel to cancel this action.",
                     okTitle: "Delete",
                     cancelTitle: "Cancel",
-                    okActionStyle: UIAlertActionStyle.destructive,
-                    cancelActionStyle: UIAlertActionStyle.cancel,
+                    okActionStyle: UIAlertAction.Style.destructive,
+                    cancelActionStyle: UIAlertAction.Style.cancel,
                     okAction: { (action) in
                         let subject = Model.sharedInstance.subjects[indexPath.row]
                         Model.sharedInstance.subjects.remove(at: indexPath.row)
@@ -135,8 +135,8 @@ class SubjectsTableViewController: UITableViewController {
                     message: "Do you really want to delete this subject? Tap Delete to continue or Cancel to cancel this action.",
                     okTitle: "Delete",
                     cancelTitle: "Cancel",
-                    okActionStyle: UIAlertActionStyle.destructive,
-                    cancelActionStyle: UIAlertActionStyle.cancel,
+                    okActionStyle: UIAlertAction.Style.destructive,
+                    cancelActionStyle: UIAlertAction.Style.cancel,
                     okAction: { (action) in
                         let subject = Model.sharedInstance.subjects[indexPath.row]
                         Model.sharedInstance.subjects.remove(at: indexPath.row)

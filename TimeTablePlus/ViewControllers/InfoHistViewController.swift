@@ -24,16 +24,19 @@ class InfoHistViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         let attrsNormal = [
-            NSAttributedStringKey.foregroundColor: UIColor.black,
-            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19.0)
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19.0)
         ]
         let attrsSelected = [
-            NSAttributedStringKey.foregroundColor: UIColor.red,
-            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 19.0)
+            NSAttributedString.Key.foregroundColor: UIColor.red,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 19.0)
         ]
         UITabBarItem.appearance().setTitleTextAttributes(attrsNormal, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(attrsSelected, for: .selected)
         
+        filterSegmentedControl.ensureiOS12Style()
+        sortByDateSegmentedControl.ensureiOS12Style()
+
     }
     
     // Fetch information from database based on selected criteria and sort
@@ -133,7 +136,7 @@ class InfoHistViewController: UIViewController, UITableViewDataSource, UITableVi
     // Enable deleting table view row - when delete is selected information is removed from three places:
     // from Model's information array, from table view and then from database.
     // End user must confirm deleting.
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             askUser(
                 controller: self,
@@ -141,8 +144,8 @@ class InfoHistViewController: UIViewController, UITableViewDataSource, UITableVi
                 message: "Do you really want to delete this information? Tap Delete to continue or Cancel to cancel this action.",
                 okTitle: "Delete",
                 cancelTitle: "Cancel",
-                okActionStyle: UIAlertActionStyle.destructive,
-                cancelActionStyle: UIAlertActionStyle.cancel,
+                okActionStyle: UIAlertAction.Style.destructive,
+                cancelActionStyle: UIAlertAction.Style.cancel,
                 okAction: { (action) in
                     let info = Model.sharedInstance.information[indexPath.row]
                     Model.sharedInstance.information.remove(at: indexPath.row)

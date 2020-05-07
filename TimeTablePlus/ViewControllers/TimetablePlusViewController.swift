@@ -35,6 +35,9 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
         Model.sharedInstance.currentTimetable = Model.sharedInstance.timetables[segmentedControl.selectedSegmentIndex]
         Model.sharedInstance.currentDay = Model.sharedInstance.days[pickerView.selectedRow(inComponent: 0)]
         
+        // Ensure that SegmentedControl has look and feel as similar as possible to look and feel in ios12 and before
+        segmentedControl.ensureiOS12Style()
+        
     }
     
     
@@ -154,7 +157,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
     // Enable deleting table view row - when delete is selected timetable item is removed from three places:
     // from Model's items array, from table view and then from database.
     // End user must confirm deleting.
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             askUser(
                 controller: self,
@@ -162,8 +165,8 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
                 message: "Do you really want to delete this timetable item? Tap Delete to continue or Cancel to cancel this action.",
                 okTitle: "Delete",
                 cancelTitle: "Cancel",
-                okActionStyle: UIAlertActionStyle.destructive,
-                cancelActionStyle: UIAlertActionStyle.cancel,
+                okActionStyle: UIAlertAction.Style.destructive,
+                cancelActionStyle: UIAlertAction.Style.cancel,
                 okAction: { (action) in
                     let item = Model.sharedInstance.items[indexPath.row]
                     Model.sharedInstance.items.remove(at: indexPath.row)
@@ -191,7 +194,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
         var actions = [
                 [
                     "actionTitle":"New homework",
-                    "actionStyle":UIAlertActionStyle.default,
+                    "actionStyle":UIAlertAction.Style.default,
                     "actionHandler":
                         {
                             (action: UIAlertAction) -> (Void) in
@@ -206,7 +209,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
             actions.append(
                 [
                     "actionTitle":"Last homework",
-                    "actionStyle":UIAlertActionStyle.default,
+                    "actionStyle":UIAlertAction.Style.default,
                     "actionHandler":
                         {
                             (action: UIAlertAction) -> (Void) in
@@ -220,7 +223,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
         actions.append(
             [
                 "actionTitle":"New exam",
-                "actionStyle":UIAlertActionStyle.default,
+                "actionStyle":UIAlertAction.Style.default,
                 "actionHandler":
                     {
                         (action: UIAlertAction) -> (Void) in
@@ -234,7 +237,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
             actions.append(
                 [
                     "actionTitle":"Last exam",
-                    "actionStyle":UIAlertActionStyle.default,
+                    "actionStyle":UIAlertAction.Style.default,
                     "actionHandler":
                         {
                             (action: UIAlertAction) -> (Void) in
@@ -248,7 +251,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
         actions.append(
             [
                 "actionTitle":"Update timetable item",
-                "actionStyle":UIAlertActionStyle.default,
+                "actionStyle":UIAlertAction.Style.default,
                 "actionHandler":
                     {
                         (action: UIAlertAction) -> (Void) in
@@ -263,7 +266,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
         actions.append(
             [
                 "actionTitle":"Cancel",
-                "actionStyle":UIAlertActionStyle.cancel,
+                "actionStyle":UIAlertAction.Style.cancel,
                 "actionHandler":
                     {
                         (action: UIAlertAction) -> (Void) in
@@ -325,7 +328,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
         var actions = [
             [
                 "actionTitle":"New Information",
-                "actionStyle":UIAlertActionStyle.default,
+                "actionStyle":UIAlertAction.Style.default,
                 "actionHandler":
                     {
                         (action: UIAlertAction) -> (Void) in
@@ -340,7 +343,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
             actions.append(
                 [
                     "actionTitle":"Last information",
-                    "actionStyle":UIAlertActionStyle.default,
+                    "actionStyle":UIAlertAction.Style.default,
                     "actionHandler":
                         {
                             (action: UIAlertAction) -> (Void) in
@@ -354,7 +357,7 @@ class TimetablePlusViewController: UIViewController, UIPickerViewDataSource, UIP
         actions.append(
             [
                 "actionTitle":"Cancel",
-                "actionStyle":UIAlertActionStyle.cancel,
+                "actionStyle":UIAlertAction.Style.cancel,
                 "actionHandler":
                     {
                         (action: UIAlertAction) -> (Void) in

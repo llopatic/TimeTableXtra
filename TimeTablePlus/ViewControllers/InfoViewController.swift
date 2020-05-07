@@ -62,14 +62,14 @@ class InfoViewController: UIViewController, UITextViewDelegate, UIGestureRecogni
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(InfoViewController.keyboardWillShow(notification:)),
-            name: Notification.Name.UIKeyboardWillShow,
+            name: UIResponder.keyboardWillShowNotification,
             object: nil)
         
         // Defining method that will be run when keyboard hides
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(InfoViewController.keyboardWillHide(notification:)),
-            name: Notification.Name.UIKeyboardWillHide,
+            name: UIResponder.keyboardWillHideNotification,
             object: nil)
         
         // If navigating from TimetablePlusViewController, currentInformation in Model is set to nil

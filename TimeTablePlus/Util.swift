@@ -21,8 +21,8 @@ func askUser(
     message: String,
     okTitle: String,
     cancelTitle: String,
-    okActionStyle: UIAlertActionStyle,
-    cancelActionStyle: UIAlertActionStyle,
+    okActionStyle: UIAlertAction.Style,
+    cancelActionStyle: UIAlertAction.Style,
     okAction: ((UIAlertAction) -> Void)?,
     cancelAction:((UIAlertAction) -> Void)?)
 {
@@ -55,7 +55,7 @@ func askUserForOption(
     for action in actions {
         let alertAction = UIAlertAction(
             title: action["actionTitle"] as? String,
-            style: action["actionStyle"] as! UIAlertActionStyle,
+            style: action["actionStyle"] as! UIAlertAction.Style,
             handler: action["actionHandler"] as? (UIAlertAction) -> Void)
         alert.addAction(alertAction)
     }
@@ -71,7 +71,7 @@ func informUser(
     title: String,
     message: String,
     okTitle: String,
-    okActionStyle: UIAlertActionStyle,
+    okActionStyle: UIAlertAction.Style,
     okAction: ((UIAlertAction) -> Void)?)
 {
     let alert = UIAlertController(
@@ -123,5 +123,15 @@ extension String {
         
         return true
     
+    }
+}
+
+// Ensure that SegmentedControl has look and feel as similar as possible to look and feel in ios12 and before
+extension UISegmentedControl {
+    func ensureiOS12Style(){
+        if #available(iOS 13.0, *) {
+            selectedSegmentTintColor =  UIColor(red: 0.08235294118, green: 0.4784313725, blue: 1, alpha: 1)
+            setTitleTextAttributes([.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13, weight: .regular)], for: .selected)
+        }
     }
 }

@@ -135,3 +135,11 @@ extension UISegmentedControl {
         }
     }
 }
+
+// Print path of sqlite file
+func printDatabasePath() {
+    let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+    let docsDir = dirPaths[0]
+    let databasePath = docsDir.replacingOccurrences(of: "Documents", with: "Library/Application support")
+    print("Database path: \(databasePath)")
+}

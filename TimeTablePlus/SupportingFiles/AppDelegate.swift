@@ -61,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 Model.sharedInstance.deltaY = 50
         }
         
+        //printDatabasePath()
+        
         return true
     }
 
